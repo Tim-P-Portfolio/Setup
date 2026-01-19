@@ -1,3 +1,4 @@
+```
 cargo init
 
 mkdir -p .cargo/
@@ -68,3 +69,4 @@ fn main() -> ! {
 }
 
 ''' >src/main.rs
+```
