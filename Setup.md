@@ -24,11 +24,6 @@ cargo add \
     panic-halt \
     rtt-target \
     cortex-m --features cortex-m/critical-section-single-core
-# features = ["critical-section-single-core"]
-
-# [profile.release]
-# debug = true
-
 
 # Embed.toml
 echo '''
