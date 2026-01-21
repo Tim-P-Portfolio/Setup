@@ -14,7 +14,7 @@ rustflags = [
   "-C", "linker=rust-lld",
   "-C", "link-arg=-Tlink.x",
 ]
-''' > .cargo/config.toml
+''' >.cargo/config.toml
 
 # Cargo.toml
 cargo add \
@@ -38,7 +38,7 @@ enabled = true
 
 [default.gdb]
 enabled = false
-''' > Embed.toml
+''' >Embed.toml
 
 mkdir -p src/
 
@@ -63,5 +63,5 @@ fn main() -> ! {
     }
 }
 
-''' > src/main.rs
+''' >src/main.rs
 ```
