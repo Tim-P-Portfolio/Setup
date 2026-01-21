@@ -1,4 +1,4 @@
-```
+``` fish
 cargo init
 
 mkdir -p .cargo/
