@@ -1,4 +1,8 @@
-cargo init $argv
+cargo init $argv[1]
+
+if test -e $argv[1]
+    cd $argv[1]
+end
 
 mkdir -p .cargo/
 
@@ -13,7 +17,7 @@ rustflags = [
   "-C", "linker=rust-lld",
   "-C", "link-arg=-Tlink.x",
 ]
-''' > .cargo/config.toml
+''' >.cargo/config.toml
 
 # Cargo.toml
 cargo add \
@@ -37,7 +41,7 @@ enabled = true
 
 [default.gdb]
 enabled = false
-''' > Embed.toml
+''' >Embed.toml
 
 mkdir -p src/
 
@@ -62,4 +66,4 @@ fn main() -> ! {
     }
 }
 
-''' > src/main.rs
+''' >src/main.rs
