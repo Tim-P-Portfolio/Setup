@@ -24,7 +24,7 @@ cargo add \
     cortex-m-rt \
     embedded-hal \
     microbit-v2 \
-    panic-halt \
+    panic-rtt-target \
     rtt-target \
     cortex-m --features cortex-m/critical-section-single-core
 
@@ -52,7 +52,6 @@ echo '''
 use cortex_m_rt::entry;
 use embedded_hal::delay::DelayNs;
 use microbit::{display::blocking::Display, hal::timer};
-use panic_halt as _;
 use rtt_target::{rprintln, rtt_init_print};
 
 #[entry]
