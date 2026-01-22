@@ -53,6 +53,7 @@ use cortex_m_rt::entry;
 use embedded_hal::delay::DelayNs;
 use microbit::{display::blocking::Display, hal::timer};
 use rtt_target::{rprintln, rtt_init_print};
+use panic_rtt_target as _;
 
 #[entry]
 fn main() -> ! {
